@@ -28,9 +28,9 @@ const links: LinkProps[] = [
 ];
 
 const slideTexts = [
+  "🚀 Entusiasta por tecnlogia",
   "🤓 Amo estudar e desenvolver coisas",
   "🎯 Foco na evolução",
-  "🚀 Entusiasta por tecnlogia",
   "👀 Fecha um serviço aí, na humilda",
 ];
 
