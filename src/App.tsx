@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Link } from "./components/Link";
 import { LinkProps } from "./ts/link";
 
@@ -27,7 +28,26 @@ const links: LinkProps[] = [
 // <p>🤓 Amo estudar e desenvolver coisas</p>
 //             <p>🎯 Foco na evolução</p>
 
+const slideTexts = [
+  "🤓 Amo estudar e desenvolver coisas",
+  "🎯 Foco na evolução",
+  "🚀 Entusiasta por tecnlogia",
+  "👀 Fecha um serviço aí, na humilda",
+];
+
 export function App() {
+  const [currentSlideText, setCurrentSlideText] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlideText((currentSlideText) =>
+        currentSlideText === slideTexts.length - 1 ? 0 : currentSlideText + 1
+      );
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [currentSlideText]);
+
   return (
     <div className="bg-gradient-to-t from-gray-900 to-emerald-900 min-h-screen min-w-full pb-16">
       <div className="max-w-md mx-auto flex flex-col items-center">
@@ -50,11 +70,13 @@ export function App() {
             Sites, aplicações web, desenvolvimento mobile, landing pages e MAIS!
           </span>
 
-          <div className="text-md mt-4 flex flex-col">
-            <p>🚀 Entusiasta por tecnlogia</p>
+          <div className="text-md mt-4 flex flex-col relative">
+            <p className="transition-all animate-wiggle absolute w-max">
+              {slideTexts[currentSlideText]}
+            </p>
           </div>
 
-          <div className="mt-8 flex flex-col gap-3 px-6">
+          <div className="mt-12 flex flex-col gap-3 px-6">
             {links.map((link) => (
               <Link
                 title={link.title}
