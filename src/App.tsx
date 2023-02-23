@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { FiShare2 } from "react-icons/fi";
+
 import { Link } from "./components/Link";
 import { LinkProps } from "./ts/link";
 
@@ -25,9 +27,6 @@ const links: LinkProps[] = [
   },
 ];
 
-// <p>🤓 Amo estudar e desenvolver coisas</p>
-//             <p>🎯 Foco na evolução</p>
-
 const slideTexts = [
   "🤓 Amo estudar e desenvolver coisas",
   "🎯 Foco na evolução",
@@ -51,16 +50,26 @@ export function App() {
   return (
     <div className="bg-gradient-to-t from-gray-900 to-emerald-900 min-h-screen min-w-full pb-16">
       <div className="max-w-md mx-auto flex flex-col items-center">
-        <header className="pt-12 text-center text-white">
+        <header className="pt-12 text-center text-white relative w-full">
           <img
             src="https://github.com/isacgpaz.png"
             alt="Foto de Isac Paz"
-            className="rounded-full border-emerald-600 border-4 w-28 h-28"
+            className="rounded-full border-emerald-600 border-4 w-28 h-28 mx-auto"
           />
-
           <span className="block mt-3 text-2xl font-medium">Isac Paz</span>
-
           <span className="block text-sm opacity-60">@isacgpaz</span>
+
+          <button
+            className="absolute right-5 top-5 text-2xl text-zinc-100 bg-emerald-800 p-2 rounded-full"
+            onClick={() => {
+              navigator.share({
+                title: "Compartilhar",
+                text: "Compartilhar",
+              });
+            }}
+          >
+            <FiShare2 />
+          </button>
         </header>
 
         <main className="text-white text-center mt-6 w-full">
