@@ -18,7 +18,7 @@ const links: LinkProps[] = [
   {
     title: "Linkedin",
     url: "https://linkedin.com/in/isacgpaz",
-    description: "Alguns posts legais sobre tecnologia",
+    description: "Alguns posts legais (ou não) sobre tecnologia",
   },
   {
     title: "E-mail",
@@ -62,10 +62,13 @@ export function App() {
           <button
             className="absolute right-5 top-5 text-2xl text-zinc-100 bg-emerald-800 p-2 rounded-full"
             onClick={() => {
-              navigator.share({
-                title: "Compartilhar",
-                text: "Compartilhar",
-              });
+              if (navigator.share) {
+                navigator.share({
+                  title: "Me ajude a alcançar mais pessoas!",
+                  text: "Conhece alguém que pode se interessar pelo meu trabalho? Vai ser um prazer marcar um bate-papo!",
+                  url: document.location.href,
+                });
+              }
             }}
           >
             <FiShare2 />
