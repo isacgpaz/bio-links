@@ -64,9 +64,8 @@ export function App() {
             onClick={() => {
               if (navigator.share) {
                 navigator.share({
-                  title: "Me ajude a alcançar mais pessoas!",
-                  text: "Conhece alguém que pode se interessar pelo meu trabalho? Vai ser um prazer marcar um bate-papo!",
-                  url: document.location.href,
+                  text: "Olá! Meu nome é Isac! Sou desenvolvedor Front End. Gostaria de saber mais sobre meus serviços?",
+                  url: import.meta.env.VITE_APP_SHORT_URL,
                 });
               }
             }}
