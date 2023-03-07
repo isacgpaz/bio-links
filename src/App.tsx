@@ -28,10 +28,9 @@ const links: LinkProps[] = [
 ];
 
 const slideTexts = [
-  "🚀 Entusiasta por tecnlogia",
+  "🚀 Entusiasta por tecnologia",
   "🤓 Amo estudar e desenvolver coisas",
   "🎯 Foco na evolução",
-  "👀 Fecha um serviço aí, na humilda",
 ];
 
 export function App() {
