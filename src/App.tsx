@@ -25,6 +25,11 @@ const links: LinkProps[] = [
     url: "mailto:isacgomesp@gmail.com",
     description: "Entre em contato comigo",
   },
+  {
+    title: "Currículo",
+    url: "/resume.pdf",
+    description: "Apresentação, formação, cursos e mais",
+  },
 ];
 
 const slideTexts = [
