@@ -30,6 +30,10 @@ const links: LinkProps[] = [
     url: "/resume.pdf",
     description: "Apresentação, formação, cursos e mais",
   },
+  {
+    title: "Instagram",
+    url: "https://www.instagram.com/isacgpaz",
+  },
 ];
 
 const slideTexts = [
