@@ -7,7 +7,7 @@ import { LinkProps } from "./ts/link";
 const links: LinkProps[] = [
   {
     title: "WhatsApp",
-    url: "https://api.whatsapp.com/send?phone=5588981294728",
+    url: "https://api.whatsapp.com/send?phone=5588981297428",
     description: "Quer falar comigo de forma rápida?",
   },
   {
